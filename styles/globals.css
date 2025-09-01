@@ -2,51 +2,201 @@
 @tailwind components;
 @tailwind utilities;
 
-/* shadcn theme tokens */
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --radius: 0.5rem;
+  --action-item-large-font-family: "Inter", Helvetica;
+  --action-item-large-font-size: 16px;
+  --action-item-large-font-style: normal;
+  --action-item-large-font-weight: 600;
+  --action-item-large-letter-spacing: 0px;
+  --action-item-large-line-height: normal;
+  --action-item-medium-font-family: "Inter", Helvetica;
+  --action-item-medium-font-size: 14px;
+  --action-item-medium-font-style: normal;
+  --action-item-medium-font-weight: 500;
+  --action-item-medium-letter-spacing: 0px;
+  --action-item-medium-line-height: normal;
+  --body-medium-font-family: "Inter", Helvetica;
+  --body-medium-font-size: 16px;
+  --body-medium-font-style: normal;
+  --body-medium-font-weight: 400;
+  --body-medium-letter-spacing: 0px;
+  --body-medium-line-height: 150%;
+  --body-small-font-family: "Inter", Helvetica;
+  --body-small-font-size: 14px;
+  --body-small-font-style: normal;
+  --body-small-font-weight: 400;
+  --body-small-letter-spacing: 0px;
+  --body-small-line-height: 120.00000476837158%;
+  --body-tiny-font-family: "Inter", Helvetica;
+  --body-tiny-font-size: 12px;
+  --body-tiny-font-style: normal;
+  --body-tiny-font-weight: 400;
+  --body-tiny-letter-spacing: 0px;
+  --body-tiny-line-height: 120.00000476837158%;
+  --body-tiny-semibold-font-family: "Inter", Helvetica;
+  --body-tiny-semibold-font-size: 12px;
+  --body-tiny-semibold-font-style: normal;
+  --body-tiny-semibold-font-weight: 600;
+  --body-tiny-semibold-letter-spacing: 0px;
+  --body-tiny-semibold-line-height: 120.00000476837158%;
+  --colors-brand-primary-red: rgba(219, 54, 22, 1);
+  --colors-neutral-black: rgba(23, 23, 23, 1);
+  --colors-neutral-black-duplicate: rgba(23, 23, 23, 1);
+  --colors-neutral-gray-10: rgba(249, 249, 249, 1);
+  --colors-neutral-gray-20: rgba(238, 238, 238, 1);
+  --colors-neutral-gray-40: rgba(218, 218, 218, 1);
+  --colors-neutral-gray-50: rgba(170, 170, 170, 1);
+  --colors-neutral-gray-50-duplicate: rgba(170, 170, 170, 1);
+  --colors-neutral-gray-70: rgba(154, 154, 154, 1);
+  --colors-neutral-gray-80: rgba(86, 86, 86, 1);
+  --colors-neutral-grey-30: rgba(229, 229, 229, 1);
+  --colors-neutral-white: rgba(255, 255, 255, 1);
+  --colors-success: rgba(0, 173, 121, 1);
+  --colors-tints-red-30: rgba(255, 221, 221, 1);
+  --design-tokens-color-inputnovalue: var(--colors-neutral-gray-70);
+  --design-tokens-color-primarystroke: var(--colors-neutral-gray-40);
+  --design-tokens-radius-medium: 8px;
+  --design-tokens-radius-small: 4px;
+  --header-h4-font-family: "Inter", Helvetica;
+  --header-h4-font-size: 20px;
+  --header-h4-font-style: normal;
+  --header-h4-font-weight: 700;
+  --header-h4-letter-spacing: 0px;
+  --header-h4-line-height: 129.99999523162842%;
+  --panel-shadow: -20px 0px 40px 0px rgba(0, 0, 0, 0.05);
 }
 
-.dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
 
 @layer base {
   * { @apply border-border; }

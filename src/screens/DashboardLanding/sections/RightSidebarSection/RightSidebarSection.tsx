@@ -1,28 +1,16 @@
 import {
-  BellIcon,
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreVerticalIcon,
-  ShoppingBagIcon,
-  TicketIcon,
-  TruckIcon,
+  Bell,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  MoreVertical,
+  ShoppingBag,
+  Ticket,
+  Truck,
 } from "lucide-react";
 import React from "react";
-import { Badge } from "../../../../components/ui/badge";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../../../../components/ui/table";
 
-export const RightSidebarSection = (): JSX.Element => {
-
+const RightSidebarSection = () => {
   const [language, setLanguage] = React.useState("English");
   const [store, setStore] = React.useState("Rey's Store");
   const [showLanguageDropdown, setShowLanguageDropdown] = React.useState(false);
@@ -41,27 +29,27 @@ export const RightSidebarSection = (): JSX.Element => {
   // Data for statistics cards
   const statsCards = [
     {
-      icon: <ShoppingBagIcon className="w-4 h-4 text-[#555555]" />,
+      icon: <ShoppingBag className="w-4 h-4 text-gray-600" />,
       title: "Total sales",
       value: "€6,474,090.99",
       subtext: "10,463,987 orders",
       trend: { value: "+5.35%", positive: true },
     },
     {
-      icon: <ShoppingBagIcon className="w-4 h-4 text-[#555555]" />,
+      icon: <ShoppingBag className="w-4 h-4 text-gray-600" />,
       title: "Pending sales",
       value: "€27,4524",
       subtext: "10,463,987 orders",
       trend: { value: "-2%", positive: false },
     },
     {
-      icon: <TruckIcon className="w-4 h-4 text-[#555555]" />,
+      icon: <Truck className="w-4 h-4 text-gray-600" />,
       title: "Pending deliveries",
       value: "1,946",
       subtext: "10,463,987 orders",
     },
     {
-      icon: <TicketIcon className="w-4 h-4 text-[#555555]" />,
+      icon: <Ticket className="w-4 h-4 text-gray-600" />,
       title: "Pending ticket approval",
       value: "100",
       subtext: "10,463,987 orders",
@@ -72,7 +60,6 @@ export const RightSidebarSection = (): JSX.Element => {
   const transactions = [
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -80,15 +67,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "1",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "John Smith",
-      deliveryMethod: "E-Ticket",
-      location: "London, UK",
-      highlighted: true,
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details-2",
       status: { label: "Cancelled", color: "destructive" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -96,14 +78,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "3",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Emma Johnson",
-      deliveryMethod: "Mobile Ticket",
-      location: "Manchester, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Pending", color: "warning" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -111,14 +89,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Debit Card", color: "warning" },
       quantity: "2",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Michael Brown",
-      deliveryMethod: "Courier",
-      location: "Liverpool, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Refunded", color: "secondary" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -126,14 +100,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "5",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Sarah Wilson",
-      deliveryMethod: "E-Ticket",
-      location: "Birmingham, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -141,14 +111,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "1",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "David Taylor",
-      deliveryMethod: "Mobile Ticket",
-      location: "Glasgow, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -156,14 +122,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "2",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "James Anderson",
-      deliveryMethod: "E-Ticket",
-      location: "Leeds, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -171,14 +133,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "6",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Emily Davis",
-      deliveryMethod: "Courier",
-      location: "Newcastle, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -186,14 +144,10 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "2",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Robert Martin",
-      deliveryMethod: "Mobile Ticket",
-      location: "Cardiff, UK",
+      seller: "ABC",
     },
     {
       id: "#SC14364",
-      link:"/order-details",
       status: { label: "Delivered", color: "success" },
       date: "February 03, 2025 20:00",
       match: "Ipswich Town vs Arsenal, United Kingdom ,London",
@@ -201,10 +155,7 @@ export const RightSidebarSection = (): JSX.Element => {
       paymentMethod: { label: "Credit Card", color: "default" },
       quantity: "2",
       ticketType: "Longside Upper Tier",
-      seller: "ABC Corp",
-      customer: "Thomas Clark",
-      deliveryMethod: "Mobile Ticket",
-      location: "Bristol, UK",
+      seller: "ABC",
     },
   ];
 
@@ -216,320 +167,265 @@ export const RightSidebarSection = (): JSX.Element => {
     { id: "price", label: "Price" },
     { id: "quantity", label: "Quantity" },
     { id: "ticketType", label: "Ticket Type" },
-    { id: "seller", label: "Seller & Purchase" },
-    { id: "customer", label: "Customer" },
-    { id: "paymentMethod", label: "Payment Method" },
-    { id: "deliveryMethod", label: "Delivery Method" },
-    { id: "location", label: "Location" },
+    { id: "seller", label: "Sell" },
     { id: "actions", label: "" },
   ];
 
   // Helper function to get badge color classes
-  const getBadgeColorClasses = (color: string) => {
+  const getBadgeColorClasses = (color) => {
     switch (color) {
       case "success":
-        return "bg-[#ddffe1] text-[#00ad79]";
+        return "bg-green-50 text-green-700 border border-green-100";
       case "destructive":
-        return "bg-[#ffdddd] text-[#db3616]";
+        return "bg-red-50 text-red-700 border border-red-100";
       case "warning":
-        return "bg-[#ffe57f] text-[#705a00]";
+        return "bg-yellow-50 text-yellow-700 border border-yellow-100";
       case "secondary":
+        return "bg-gray-50 text-gray-700 border border-gray-100";
       case "default":
       default:
-        return "bg-[#ededed] text-[#161616]";
+        return "bg-gray-50 text-gray-700 border border-gray-100";
     }
   };
 
   return (
-    <div className="flex flex-col w-full items-start relative self-stretch">
+    <div className="flex flex-col w-full h-screen bg-white">
       {/* Header */}
-      <header className="flex items-center gap-3 px-8 py-5 relative self-stretch w-full flex-[0_0_auto] bg-transparent border-b border-[#dadada] bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0)_100%)]">
-        <div className="relative flex-1 font-header-h4 font-[number:var(--header-h4-font-weight)] text-[#161616] text-[length:var(--header-h4-font-size)] tracking-[var(--header-h4-letter-spacing)] leading-[var(--header-h4-line-height)] [font-style:var(--header-h4-font-style)]">
+      <header className="flex items-center justify-between px-6 py-4 bg-gradient-to-b from-white/80 to-white border-b border-gray-200">
+        <h1 className="text-xl font-semibold text-gray-900">
           Welcome back, Adam
-        </div>
+        </h1>
 
-        <div className="inline-flex items-center gap-6 relative">
-          <div className="inline-flex items-center relative">
-            <div 
-              className="inline-flex items-center gap-1 relative cursor-pointer"
+        <div className="flex items-center gap-6">
+          {/* Language Selector */}
+          <div className="relative">
+            <button
+              className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:opacity-80 transition-opacity"
               onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
             >
-              <img
-                className="relative w-[26.67px] h-5"
-                alt="United kingdom GB"
-                src="https://c.animaapp.com/PeDX8ZwH/img/united-kingdom--gb-.svg"
-              />
-              <div className="relative w-fit font-action-item-medium font-[number:var(--action-item-medium-font-weight)] text-colors-neutral-black-duplicate text-[length:var(--action-item-medium-font-size)] tracking-[var(--action-item-medium-letter-spacing)] leading-[var(--action-item-medium-line-height)] whitespace-nowrap [font-style:var(--action-item-medium-font-style)]">
-                {language}
+              <div className="w-6 h-4 bg-blue-600 rounded-sm flex items-center justify-center">
+                <span className="text-xs text-white font-bold">GB</span>
               </div>
-              <ChevronDownIcon className="w-4 h-4" />
-            </div>
-            {showLanguageDropdown && (
-              <div className="absolute top-full right-0 mt-1 bg-white shadow-md rounded-md z-10 border border-design-tokens-color-primarystroke">
-                {languageOptions.map((lang) => (
-                  <div 
-                    key={lang} 
-                    className="px-4 py-2 hover:bg-colors-neutral-gray-10 cursor-pointer"
-                    onClick={() => {
-                      setLanguage(lang);
-                      setShowLanguageDropdown(false);
-                    }}
-                  >
-                    {lang}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="inline-flex items-center gap-1 relative">
-            <div 
-              className="inline-flex items-center gap-1 relative cursor-pointer"
-              onClick={() => setShowStoreDropdown(!showStoreDropdown)}
-            >
-              <div className="relative w-fit [font-family:'Inter',Helvetica] font-medium text-colors-neutral-black text-sm tracking-[0] leading-[normal] whitespace-nowrap">
-                {store}
-              </div>
-              <ChevronDownIcon className="w-3.5 h-3.5" />
-            </div>
+              <span>{language}</span>
+              <ChevronDown className="w-4 h-4 text-gray-600" />
+            </button>
             {showStoreDropdown && (
-              <div className="absolute top-full right-0 mt-1 bg-white shadow-md rounded-md z-10 border border-design-tokens-color-primarystroke">
+              <div className="absolute top-full right-0 mt-1 bg-white shadow-lg rounded-md z-20 border border-gray-200 min-w-36">
                 {storeOptions.map((storeOption) => (
-                  <div 
-                    key={storeOption} 
-                    className="px-4 py-2 hover:bg-colors-neutral-gray-10 cursor-pointer"
+                  <button
+                    key={storeOption}
+                    className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors"
                     onClick={() => {
                       setStore(storeOption);
                       setShowStoreDropdown(false);
                     }}
                   >
                     {storeOption}
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
           </div>
-          <div className="inline-flex items-center justify-end gap-6 relative">
-            <div className="relative w-6 h-6 bg-[url(https://c.animaapp.com/PeDX8ZwH/img/icon-3.svg)] bg-[100%_100%]">
-              <div className="relative w-2 h-2 left-[15px] bg-colors-brand-primary-red rounded" />
-            </div>
+
+          {/* Notification Bell */}
+          <div className="relative">
+            <Bell className="w-5 h-5 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer" />
+            <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full" />
           </div>
         </div>
       </header>
 
-      <div className="flex flex-col items-start relative flex-1 self-stretch w-full grow">
-        {/* Time period filters and stats cards */}
-        <div className="flex flex-col items-start gap-2 px-8 py-5 relative self-stretch w-full flex-[0_0_auto]">
-          {/* Time period filters */}
-          <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
+      {/* Main Content */}
+      <div className="flex-1 overflow-auto">
+        {/* Filters and Stats Section */}
+        <div className="px-6 py-5 space-y-4">
+          {/* Time Period Filters */}
+          <div className="flex items-center gap-3">
             {timePeriods.map((period) => (
-              <Button
+              <button
                 key={period.id}
-                variant={period.selected ? "outline" : "outline"}
-                className={`h-[34px] px-3 py-0 rounded-[100px] ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   period.selected
-                    ? "bg-[#fff7f7] text-[#db3616] border-[#db3616]"
-                    : "bg-white text-[#161616] border-[#dadada]"
+                    ? "bg-red-50 text-red-600 border border-red-600"
+                    : "bg-white text-gray-900 border border-gray-300 hover:border-red-600 hover:text-red-600"
                 }`}
               >
-                <span className="[font-family:'Inter',Helvetica] font-medium text-sm">
-                  {period.label}
-                </span>
-              </Button>
+                {period.label}
+              </button>
             ))}
           </div>
 
-          {/* Stats cards */}
-          <div className="flex items-center gap-3 relative self-stretch w-full flex-[0_0_auto]">
+          {/* Stats Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {statsCards.map((card, index) => (
-              <Card key={index} className="flex-1 border-[#dadada] rounded-lg">
-                <CardContent className="flex flex-col items-start gap-2 p-4">
-                  <div className="flex items-start justify-between relative self-stretch w-full">
-                    <div className="flex items-center gap-1">
-                      {card.icon}
-                      <span className="[font-family:'Inter',Helvetica] font-normal text-[#555555] text-sm tracking-[0] leading-[16.8px] whitespace-nowrap">
-                        {card.title}
-                      </span>
-                    </div>
-                    {card.trend && (
-                      <div className="inline-flex items-center justify-end gap-1">
-                        <Badge
-                          className={`h-6 px-1 py-2 ${
-                            card.trend.positive
-                              ? "bg-[#ddffe1] text-[#00ad79]"
-                              : "bg-[#fff0f0] text-[#db3616]"
-                          }`}
-                        >
-                          {card.trend.positive ? "↑" : "↓"} {card.trend.value}
-                        </Badge>
-                      </div>
-                    )}
+              <div
+                key={index}
+                className="bg-white border border-gray-300 rounded-lg p-4 hover:shadow-sm transition-shadow"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    {card.icon}
+                    <span className="text-sm text-gray-600 font-normal">
+                      {card.title}
+                    </span>
                   </div>
-                  <div className="flex flex-col items-start gap-3 w-full">
-                    <div className="font-header-h4 font-[number:var(--header-h4-font-weight)] text-[#161616] text-[length:var(--header-h4-font-size)] tracking-[var(--header-h4-letter-spacing)] leading-[var(--header-h4-line-height)] [font-style:var(--header-h4-font-style)]">
-                      {card.value}
+                  {card.trend && (
+                    <div
+                      className={`px-2 py-1 rounded text-xs font-medium ${
+                        card.trend.positive
+                          ? "bg-green-50 text-green-700"
+                          : "bg-red-50 text-red-700"
+                      }`}
+                    >
+                      {card.trend.positive ? "↑" : "↓"} {card.trend.value}
                     </div>
-                    {card.subtext && (
-                      <div className="[font-family:'Inter',Helvetica] font-normal text-[#555555] text-sm tracking-[0] leading-[16.8px]">
-                        {card.subtext}
-                      </div>
-                    )}
+                  )}
+                </div>
+                <div className="space-y-1">
+                  <div className="text-xl font-semibold text-gray-900">
+                    {card.value}
                   </div>
-                </CardContent>
-              </Card>
+                  {card.subtext && (
+                    <div className="text-sm text-gray-600">{card.subtext}</div>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Transaction history section */}
-        <div className="flex flex-col items-start gap-5 px-8 py-5 relative flex-1 self-stretch w-full grow">
-          {/* Section header */}
-          <div className="flex items-center justify-between relative self-stretch w-full">
-            <div className="font-body-medium-bold font-[number:var(--body-medium-bold-font-weight)] text-[#161616] text-[length:var(--body-medium-bold-font-size)] tracking-[var(--body-medium-bold-letter-spacing)] leading-[var(--body-medium-bold-line-height)] whitespace-nowrap [font-style:var(--body-medium-bold-font-style)]">
+        {/* Transaction History Section */}
+        <div className="px-6 py-5 flex-1">
+          {/* Section Header */}
+          <div className="flex items-center justify-between mb-5">
+            <h2 className="text-lg font-semibold text-gray-900">
               Transaction History
-            </div>
-            <Button
-              variant="link"
-              className="p-0 h-auto text-[#db3616] [font-family:'Inter',Helvetica] font-medium text-sm"
-            >
+            </h2>
+            <button className="text-red-600 text-sm font-medium underline hover:no-underline transition-all">
               See All
-            </Button>
+            </button>
           </div>
 
-          {/* Transaction table */}
-          <div className="flex flex-col items-start gap-2 relative flex-1 self-stretch w-full grow">
-            <div
-              id="table-container"
-              className="flex-1 w-full rounded-lg overflow-x-auto border border-solid border-[#dadada] scrollbar-hide"
-              style={{ scrollBehavior: 'smooth' }}
-            >
-              <Table className="min-w-[1100px]"> {/* Adjusted min-width for 6 visible columns + actions */}
-                <TableHeader>
-                  <TableRow className="bg-[#f9f9f9]">
-                    {tableHeaders.slice(0, 6).map((header) => (
-                      <TableHead
+          {/* Transaction Table */}
+          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-white border-b border-gray-200">
+                    {tableHeaders.map((header) => (
+                      <th
                         key={header.id}
-                        className={`h-[34px] p-3 text-[#555555] text-sm [font-family:'Inter',Helvetica] font-normal whitespace-nowrap border-y border-[#dadada] ${header.id === "match" ? "w-[250px]" : "w-[180px]"}`}
+                        className="px-4 py-3 text-left text-gray-600 text-sm font-normal whitespace-nowrap"
                       >
                         <div className="flex items-center gap-1">
                           {header.label}
-                          <ChevronDownIcon className="w-3 h-3" />
+                          {header.id !== "actions" ? (
+                            <ChevronDown className="w-3 h-3 text-gray-400 opacity-60" />
+                          ) : (
+                            <div className="flex items-center gap-1 ml-auto">
+                              <button className="w-6 h-6 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <ChevronLeft className="w-3 h-3 text-gray-600" />
+                              </button>
+                              <button className="w-6 h-6 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-50 transition-colors">
+                                <ChevronRight className="w-3 h-3 text-gray-600" />
+                              </button>
+                            </div>
+                          )}
                         </div>
-                      </TableHead>
+                      </th>
                     ))}
-                    {/* Actions column header with scroll buttons */}
-                    <TableHead
-                      key="actions-header"
-                      className="h-[34px] p-3 text-[#555555] text-sm [font-family:'Inter',Helvetica] font-normal whitespace-nowrap border-y border-[#dadada] w-[50px]"
-                    >
-                      <div className="flex items-center gap-2 ml-auto">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 rounded-full border border-[#dadada]"
-                          onClick={() => {
-                            const tableContainer = document.getElementById('table-container');
-                            if (tableContainer) {
-                              tableContainer.scrollLeft -= 180; // Scroll by one column width
-                            }
-                          }}
-                        >
-                          <ChevronLeftIcon className="h-5 w-5" />
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 rounded-full border border-[#dadada]"
-                          onClick={() => {
-                            const tableContainer = document.getElementById('table-container');
-                            if (tableContainer) {
-                              tableContainer.scrollLeft += 180; // Scroll by one column width
-                            }
-                          }}
-                        >
-                          <ChevronRightIcon className="h-5 w-5" />
-                        </Button>
-                      </div>
-                    </TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
+                  </tr>
+                </thead>
+                <tbody>
                   {transactions.map((transaction, index) => (
-                    <TableRow
+                    <tr
                       key={index}
-                      className={`h-[73px] border-y border-[#dadada] ${transaction.highlighted ? "bg-[#fff7f7]" : ""}`}
+                      className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors"
                     >
-                      {/* Render cells for the first 6 data columns */}
-                      <TableCell className="p-3 border-y border-[#dadada] w-[180px]">
-                        <div className="flex flex-col items-start justify-center gap-2">
-                          <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
-                            <a href={transaction.link}>{transaction.id}</a>
+                      {/* Order No. & Status */}
+                      <td className="px-4 py-3">
+                        <div className="space-y-2">
+                          <div className="text-sm text-gray-900 font-normal">
+                            {transaction.id}
                           </div>
-                          <Badge
-                            className={`h-6 px-2 py-0 ${getBadgeColorClasses(transaction.status.color)}`}
+                          <span
+                            className={`inline-block text-xs px-2 py-1 rounded font-normal ${getBadgeColorClasses(
+                              transaction.status.color
+                            )}`}
                           >
                             {transaction.status.label}
-                          </Badge>
+                          </span>
                         </div>
-                      </TableCell>
+                      </td>
 
-                      <TableCell className="p-3 border-y border-[#dadada] w-[180px]">
-                        <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
+                      {/* Transaction Date */}
+                      <td className="px-4 py-3">
+                        <div className="text-sm text-gray-900 font-normal">
                           {transaction.date}
                         </div>
-                      </TableCell>
+                      </td>
 
-                      <TableCell className="p-3 border-y border-[#dadada] w-[250px]">
-                        <div className="flex flex-col items-start justify-center gap-3">
-                          <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
+                      {/* Match */}
+                      <td className="px-4 py-3">
+                        <div className="space-y-1 max-w-48">
+                          <div className="text-sm text-gray-900 font-normal leading-tight">
                             {transaction.match}
                           </div>
-                          <div className="text-[#555555] text-[length:var(--body-tiny-font-size)] leading-[var(--body-tiny-line-height)] font-body-tiny font-[number:var(--body-tiny-font-weight)] tracking-[var(--body-tiny-letter-spacing)] [font-style:var(--body-tiny-font-style)]">
+                          <div className="text-xs text-gray-500 font-normal">
                             {transaction.date}
                           </div>
                         </div>
-                      </TableCell>
+                      </td>
 
-                      <TableCell className="p-3 border-y border-[#dadada] w-[180px]">
-                        <div className="flex flex-col items-start justify-center gap-2">
-                          <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
+                      {/* Price */}
+                      <td className="px-4 py-3">
+                        <div className="space-y-2">
+                          <div className="text-sm text-gray-900 font-normal">
                             {transaction.price}
                           </div>
-                          <Badge
-                            className={`h-6 px-2 py-0 ${getBadgeColorClasses(transaction.paymentMethod.color)}`}
+                          <span
+                            className={`inline-block text-xs px-2 py-1 rounded font-normal ${getBadgeColorClasses(
+                              transaction.paymentMethod.color
+                            )}`}
                           >
                             {transaction.paymentMethod.label}
-                          </Badge>
+                          </span>
                         </div>
-                      </TableCell>
+                      </td>
 
-                      <TableCell className="p-3 border-y border-[#dadada] w-[180px]">
-                        <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
+                      {/* Quantity */}
+                      <td className="px-4 py-3">
+                        <div className="text-sm text-gray-900 font-normal">
                           {transaction.quantity}
                         </div>
-                      </TableCell>
+                      </td>
 
-                      <TableCell className="p-3 border-y border-[#dadada] w-[180px]">
-                        <div className="[font-family:'Inter',Helvetica] font-normal text-[#161616] text-sm tracking-[0] leading-[16.8px]">
+                      {/* Ticket Type */}
+                      <td className="px-4 py-3">
+                        <div className="text-sm text-gray-900 font-normal">
                           {transaction.ticketType}
                         </div>
-                      </TableCell>
+                      </td>
+
+                      {/* Sell */}
+                      <td className="px-4 py-3">
+                        <div className="text-sm text-gray-900 font-normal">
+                          {transaction.seller}
+                        </div>
+                      </td>
 
                       {/* Actions */}
-                      <TableCell className="p-3 border-y border-[#dadada] bg-white border-l border-[#dadada] shadow-panel-shadow">
+                      <td className="px-4 py-3">
                         <div className="flex justify-center">
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-6 w-6"
-                          >
-                            <MoreVerticalIcon className="h-6 w-6" />
-                          </Button>
+                          <button className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded transition-colors">
+                            <MoreVertical className="w-4 h-4 text-gray-600" />
+                          </button>
                         </div>
-                      </TableCell>
-                    </TableRow>
+                      </td>
+                    </tr>
                   ))}
-                </TableBody>
-              </Table>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -537,3 +433,5 @@ export const RightSidebarSection = (): JSX.Element => {
     </div>
   );
 };
+
+export default RightSidebarSection;

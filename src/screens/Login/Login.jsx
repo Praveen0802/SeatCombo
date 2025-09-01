@@ -33,15 +33,15 @@ export const Login = () => {
 				</header>
 
 				<div className="flex justify-center px-4 mt-[44px]">
-					<Card className="w-full max-w-[594px] bg-colors-neutral-white rounded-[var(--design-tokens-radius-large)] border border-solid border-design-tokens-color-primarystroke">
-						<CardContent className="p-10">
+					<Card className="w-full max-w-[594px] rouded-xl bg-colors-neutral-white  border border-solid border-design-tokens-color-primarystroke">
+						<CardContent className="p-10 rounded-xl">
 							<div className="flex flex-col gap-11">
 								<div className="flex flex-col gap-11">
-									<div className="flex flex-col gap-5">
-										<h1 className="font-header-h3 font-[number:var(--header-h3-font-weight)] text-[color:var(--colors-neutral-black)] text-[length:var(--header-h3-font-size)] tracking-[var(--header-h3-letter-spacing)] leading-[var(--header-h3-line-height)] [font-style:var(--header-h3-font-style)]">
+									<div className="flex flex-col gap-3">
+										<h1 className="text-[30px] font-bold   tracking-[var(--header-h3-letter-spacing)] leading-[var(--header-h3-line-height)] [font-style:var(--header-h3-font-style)]">
 											Welcome back!
 										</h1>
-										<p className="font-body-medium font-[number:var(--body-medium-font-weight)] text-[color:var(--colors-neutral-black)] text-[length:var(--body-medium-font-size)] tracking-[var(--body-medium-letter-spacing)] leading-[var(--body-medium-line-height)] [font-style:var(--body-medium-font-style)]">
+										<p className=" font-normal text-[#565656] text-[length:var(--body-medium-font-size)] tracking-[var(--body-medium-letter-spacing)] leading-[var(--body-medium-line-height)] [font-style:var(--body-medium-font-style)]">
 											Enter your credentials to manage teams, events, sales, and more
 										</p>
 									</div>

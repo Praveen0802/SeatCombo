@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RightSidebarSection } from "./sections/RightSidebarSection/RightSidebarSection";
+import RightSidebarSection  from "./sections/RightSidebarSection/RightSidebarSection";
 import { SecondaryMenuSection } from "../SecondaryMenuSection";
 
 export const DashboardLanding = (): JSX.Element => {
